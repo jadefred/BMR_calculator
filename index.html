@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Basal Metabolic Rate Calculator</title>
+</head>
+
+<body>
+    <h1>Basal Metabolic Rate Calculator</h1>
+
+    <form action="" class='main-form'>
+
+        <!--gender-->
+        <div>
+            <p>Gender :</p>
+            <input class='gender' type="radio" name='gender' value="male" required><label for="male">Male</label>
+            <input class='gender' type="radio" name='gender' value="female"><label for="female">Female</label>
+        </div>
+
+        <!--age-->
+        <div>
+            <label for="age">Age :</label>
+            <input class='age' type="number" name='age' min='1' max='99' required>
+        </div>
+
+        <!--height-->
+        <div>
+            <label for="height">Height :</label>
+            <input class='height' type="number" name='height' min='1' max='300' required>
+        </div>
+
+        <!--weight-->
+        <div>
+            <label for="weight">Weight :</label>
+            <input class='weight' type="number" name='weight' min='1' max='1000' required>
+        </div>
+        <button type='submit' class="btn-submit">Submit</button>
+
+    </form>
+
+    <!--reset data button-->
+    <button class='btn-reset'>Reset</button>
+
+    <!--BMP primary result-->
+    <p>BMR = <span class='result'></span> Calories/day</p>
+
+    <!--tdee box and result -->
+    <div class='tdee-container'>
+        <div class="tdee-each-item">
+            <div class='tdee-img'></div>
+            <div>
+                <h2>111111</h2>
+                <p id='tdee-formula-1'>BMP : 1 = </p>
+            </div>
+        </div>
+        <div class="tdee-each-item">
+            <div class='tdee-img'></div>
+            <div>
+                <h2>22222</h2>
+                <p id='tdee-formula-2'>BMP : 2 = </p>
+            </div>
+        </div>
+        <div class="tdee-each-item">
+            <div class='tdee-img'></div>
+            <div>
+                <h2>33333</h2>
+                <p id='tdee-formula-3'>BMP : 3 = </p>
+            </div>
+        </div>
+        <div class="tdee-each-item">
+            <div class='tdee-img'></div>
+            <div>
+                <h2>44444</h2>
+                <p id='tdee-formula-4'>BMP : 4 = </p>
+            </div>
+        </div>
+        <div class="tdee-each-item">
+            <div class='tdee-img'></div>
+            <div>
+                <h2>55555</h2>
+                <p id='tdee-formula-5'>BMP : 5 = </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='main.js'></script>
+</body>
+
+</html>
