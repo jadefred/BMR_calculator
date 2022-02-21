@@ -1,7 +1,101 @@
-.btn-submit:disabled {
-  background-color: lightcoral;
+/*info
+dark-grey : #27272b
+light-grey : rgba(39, 39, 43, 0.7)
+
+*/
+
+/*Basic settings*/
+* {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  color: #27272b;
+}
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #27272b;
 }
 
+/*heading*/
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 1rem 0rem;
+  color: white;
+}
+
+/*main - include form-box and result-box*/
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+
+/*form's elements*/
+.form-box {
+  border: 3px double rgba(39, 39, 43, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 30%;
+  font-size: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.gender-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-box p {
+  margin: 0;
+}
+
+.gender-box input {
+  margin-left: 4rem;
+}
+
+.age-weight-height-box {
+  display: flex;
+  flex-direction: column;
+}
+.age-weight-height-box label {
+  margin-bottom: 0.5rem;
+}
+
+.age-weight-height-box input {
+  height: 25px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+button {
+  border: none;
+  font-size: 20px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  background-color: rgba(39, 39, 43, 0.7);
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.btn-submit:disabled {
+  background-color: rgba(39, 39, 43, 0.3);
+}
+
+/*all result*/
+.result-box {
+  width: 40%;
+}
 
 .tdee-img {
   background-color: lightslategray;
