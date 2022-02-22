@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;1,200&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <!--title-->
     <title>Basal Metabolic Rate Calculator</title>
@@ -20,6 +20,13 @@
 <body>
     <header>
         <h1>Basal Metabolic Rate Calculator</h1>
+        <p class='title-description'>The Basal Metabolic Rate (BMR) Calculator estimates your basal metabolic rate —
+            <br>
+            the amount of energy expended while at rest in a neutrally temperate environment, and in a post-absorptive
+            state. <br>
+            Your Total Daily Energy Expenditure (TDEE) is an estimation of how many calories you burn per day when
+            exercise is taken into account.
+        </p>
     </header>
 
     <main>
@@ -65,48 +72,58 @@
                     <button type='button' class='btn-reset'>Clear</button>
                 </div>
             </form>
+
+
+            <div class='form-formula-info'>
+                <p>Mifflin St. Jeor Formulas: <br>
+                    Men - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5 <br>
+                    Women - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161</p>
+                <p>TDEE is calculated by first figuring out your Basal Metabolic Rate, then multiplying that value by an
+                    activity multiplier.</p>
+            </div>
         </div>
 
         <!--include all results-->
         <div class='result-box'>
             <!--BMP primary result-->
-            <p>BMR = <span class='result'></span> Calories/day</p>
+            <div>
+                <h2 class='result-title'>BMR Result</h2>
+                <div class='bmp-result-line'>
+                    <p>BMR = <span class='result'></span> Calories/day</p>
+                </div>
+            </div>
 
             <!--tdee box and result -->
             <div class='tdee-container'>
+                <h2 class='result-title'>TDEE Result</h2>
                 <div class="tdee-each-item">
-                    <div class='tdee-img'></div>
                     <div>
-                        <h2>111111</h2>
-                        <p id='tdee-formula-1'>BMP : 1 = </p>
+                        <h2>Sedentary (Little or no exercise)</h2>
+                        <p id='tdee-formula-1'>BMP x 1.2 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
-                    <div class='tdee-img'></div>
                     <div>
-                        <h2>22222</h2>
-                        <p id='tdee-formula-2'>BMP : 2 = </p>
+                        <h2>Light Exercise (1 - 2 days / week)</h2>
+                        <p id='tdee-formula-2'>BMP x 1.375 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
-                    <div class='tdee-img'></div>
                     <div>
-                        <h2>33333</h2>
-                        <p id='tdee-formula-3'>BMP : 3 = </p>
+                        <h2>Moderate Exercise (3 - 5 days / week)</h2>
+                        <p id='tdee-formula-3'>BMP x 1.55 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
-                    <div class='tdee-img'></div>
                     <div>
-                        <h2>44444</h2>
-                        <p id='tdee-formula-4'>BMP : 4 = </p>
+                        <h2>Heavy Exercise (6 - 7 days / week)</h2>
+                        <p id='tdee-formula-4'>BMP x 1.725 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
-                    <div class='tdee-img'></div>
                     <div>
-                        <h2>55555</h2>
-                        <p id='tdee-formula-5'>BMP : 5 = </p>
+                        <h2>Athlete (2 times / days)</h2>
+                        <p id='tdee-formula-5'>BMP x 1.9 = </p>
                     </div>
                 </div>
             </div>
