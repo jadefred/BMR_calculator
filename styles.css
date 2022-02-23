@@ -39,6 +39,7 @@ h1 {
 main {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
   background-color: white;
 }
 
@@ -48,8 +49,13 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
+
+.bmp-result-line {
+  margin: 0;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -63,14 +69,28 @@ form {
 .gender-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.gender-box div {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
 }
 
 .gender-box p {
-  margin: 0;
+  min-width: 30%;
 }
 
 .gender-box input {
-  margin-left: 4rem;
+  margin-left: 1rem;
+}
+
+.gender-box label {
+  margin-top: 0;
 }
 
 .age-weight-height-box {
@@ -110,6 +130,15 @@ button {
   font-size: 14px;
 }
 
+.formula-explanation {
+  font-size: 13px;
+  color: rgba(39, 39, 43, 0.5);
+}
+
+.formula-explanation span {
+  font-family: 600;
+}
+
 /*all result*/
 .result-box {
   width: 40%;
@@ -118,8 +147,8 @@ button {
 
 .result-title {
   font-size: 30px;
-  margin: 0;
   position: relative;
+  margin: 0;
 }
 
 .result-title::after {
@@ -131,11 +160,6 @@ button {
   right: 0;
   left: 0;
   top: 40px;
-}
-
-.bmp-result-line {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .result-box p {
@@ -168,4 +192,30 @@ button {
 .tdee-result-span {
   font-weight: 600;
   font-size: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+  button {
+    border: none;
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  .form-box {
+    width: 80%;
+    min-width: 300px;
+  }
+  .result-box {
+    width: 80%;
+    min-width: 300px;
+    margin-top: 2rem;
+  }
 }

@@ -30,8 +30,17 @@
     </header>
 
     <main>
-        <!--include all form elements-->
+        <!--result and calculator of BMR-->
         <div class='form-box'>
+
+            <!--BMP primary result-->
+            <div class="form-bmp-result-box">
+                <h2 class='result-title'>BMR Result</h2>
+                <div class='bmp-result-line'>
+                    <p>BMR = <span class='result'></span> Calories/day</p>
+                </div>
+            </div>
+
             <form action="">
                 <!--gender-->
                 <div class='gender-box'>
@@ -73,25 +82,19 @@
                 </div>
             </form>
 
-
+            <!--explan the formula-->
             <div class='form-formula-info'>
-                <p>Mifflin St. Jeor Formulas: <br>
+                <p class="formula-explanation"><span>Mifflin St. Jeor Formulas:</span> <br>
                     Men - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5 <br>
                     Women - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161</p>
-                <p>TDEE is calculated by first figuring out your Basal Metabolic Rate, then multiplying that value by an
+                <p class="formula-explanation"><span>TDEE</span> is calculated by first figuring out your Basal
+                    Metabolic Rate, then multiplying that value by an
                     activity multiplier.</p>
             </div>
         </div>
 
-        <!--include all results-->
+        <!--include tdee results-->
         <div class='result-box'>
-            <!--BMP primary result-->
-            <div>
-                <h2 class='result-title'>BMR Result</h2>
-                <div class='bmp-result-line'>
-                    <p>BMR = <span class='result'></span> Calories/day</p>
-                </div>
-            </div>
 
             <!--tdee box and result -->
             <div class='tdee-container'>
