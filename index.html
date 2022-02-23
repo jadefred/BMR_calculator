@@ -13,20 +13,37 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;1,200&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="./javascript/translate.js"></script>
     <!--title-->
     <title>Basal Metabolic Rate Calculator</title>
 </head>
 
 <body>
     <header>
-        <h1>Basal Metabolic Rate Calculator</h1>
-        <p class='title-description'>The Basal Metabolic Rate (BMR) Calculator estimates your basal metabolic rate —
-            <br>
-            the amount of energy expended while at rest in a neutrally temperate environment, and in a post-absorptive
-            state. <br>
-            Your Total Daily Energy Expenditure (TDEE) is an estimation of how many calories you burn per day when
-            exercise is taken into account.
-        </p>
+        
+        <h1 name="translate" caption="h1">Basal Metabolic Rate Calculator</h1>
+        <p class='title-description des-bmr' name="translate" caption="title-description-bmr">The Basal Metabolic Rate
+            (BMR)
+            Calculator estimates your basal metabolic rate the amount of energy expended while at rest in a neutrally
+            temperate environment,
+            and in a post-absorptive
+            state.</p>
+        <p class='title-description des-tdee' name="translate" caption="title-description-tdee">Your Total Daily Energy
+            Expenditure (TDEE) is an estimation of how many
+            calories
+            you burn per day when
+            exercise is taken into account.</p>
+
+            <div class="lang-button">
+                <button id='eng_button'>English</button>
+                <button id='fr_button'>Français</button>
+                <button id='hk_button'>繁體中文</button>
+            </div>
+
     </header>
 
     <main>
@@ -35,59 +52,62 @@
 
             <!--BMP primary result-->
             <div class="form-bmp-result-box">
-                <h2 class='result-title'>BMR Result</h2>
+                <h2 class='result-title' name="translate" caption='result-bmr'>BMR Result</h2>
                 <div class='bmp-result-line'>
-                    <p>BMR = <span class='result'></span> Calories/day</p>
+                    <span class='result'></span>
+                    <p name="translate" caption='calPerDay'>Calories/day</p>
                 </div>
             </div>
 
             <form action="">
                 <!--gender-->
                 <div class='gender-box'>
-                    <p>Gender :</p>
+                    <p name="translate" caption='gender'>Gender :</p>
                     <div>
-                        <input class='gender' type="radio" name='gender' value="male" required><label
-                            for="male">Male</label>
+                        <input class='gender' type="radio" name='gender' value="male" required><label for="male"
+                            name="translate" caption='male'>Male</label>
 
-                        <input class='gender' type="radio" name='gender' value="female"><label
-                            for="female">Female</label>
+                        <input class='gender' type="radio" name='gender' value="female"><label for="female"
+                            name="translate" caption='female'>Female</label>
                     </div>
                 </div>
 
                 <!--age-->
                 <div class='age-weight-height-box'>
-                    <label for="age">Age :</label>
-                    <input class='age' type="number" name='age' min='1' max='99' placeholder='Please fill in your age'
-                        required>
+                    <label for="age" name="translate" caption='age'>Age :</label>
+                    <input class='age' type="number" name='age' min='1' max='99' required>
                 </div>
 
                 <!--height-->
                 <div class='age-weight-height-box'>
-                    <label for="height">Height :</label>
-                    <input class='height' type="number" name='height' min='1' max='300'
-                        placeholder='Please fill in your height (cm)' required>
+                    <label for="height" name="translate" caption="height">Height (cm) :</label>
+                    <input class='height' type="number" name='height' min='1' max='300' required>
                 </div>
 
                 <!--weight-->
                 <div class='age-weight-height-box'>
-                    <label for="weight">Weight :</label>
-                    <input class='weight' type="number" name='weight' min='1' max='1000'
-                        placeholder='Please fill in your weight (kg)' required>
+                    <label for="weight" name="translate" caption="weight">Weight (kg) :</label>
+                    <input class='weight' type="number" name='weight' min='1' max='1000' required>
                 </div>
 
                 <!--buttons-->
                 <div class='button-box'>
-                    <button type='submit' class="btn-submit">Calculate</button>
-                    <button type='button' class='btn-reset'>Clear</button>
+                    <button type='submit' class="btn-submit" name="translate" caption="calculate">Calculate</button>
+                    <button type='button' class='btn-reset' name="translate" caption="clear">Clear</button>
                 </div>
             </form>
 
             <!--explan the formula-->
             <div class='form-formula-info'>
-                <p class="formula-explanation"><span>Mifflin St. Jeor Formulas:</span> <br>
-                    Men - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5 <br>
-                    Women - 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161</p>
-                <p class="formula-explanation"><span>TDEE</span> is calculated by first figuring out your Basal
+                <p class="formula-explanation" name="translate" caption="jeor">Mifflin St. Jeor Formulas:</p>
+                <p class="formula-explanation" name="translate" caption="jeor-m">Men - 10 x weight (kg) + 6.25 x height
+                    (cm) – 5 x age (y) + 5 </p>
+                <p class="formula-explanation" name="translate" caption="jeor-f">Women - 10 x weight (kg) + 6.25 x
+                    height (cm) – 5 x age (y) – 161</p>
+                <br>
+
+                <p class="formula-explanation" name="translate" caption="tdee-formula">TDEE is calculated by first
+                    figuring out your Basal
                     Metabolic Rate, then multiplying that value by an
                     activity multiplier.</p>
             </div>
@@ -98,34 +118,34 @@
 
             <!--tdee box and result -->
             <div class='tdee-container'>
-                <h2 class='result-title'>TDEE Result</h2>
+                <h2 class='result-title' name="translate" caption="tdee-result">TDEE Result</h2>
                 <div class="tdee-each-item">
                     <div>
-                        <h2>Sedentary (Little or no exercise)</h2>
+                        <h2 name="translate" caption="1.2">Sedentary (Little or no exercise)</h2>
                         <p id='tdee-formula-1'>BMP x 1.2 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
                     <div>
-                        <h2>Light Exercise (1 - 2 days / week)</h2>
+                        <h2 name="translate" caption="1.375">Light Exercise (1 - 2 days / week)</h2>
                         <p id='tdee-formula-2'>BMP x 1.375 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
                     <div>
-                        <h2>Moderate Exercise (3 - 5 days / week)</h2>
+                        <h2 name="translate" caption="1.55">Moderate Exercise (3 - 5 days / week)</h2>
                         <p id='tdee-formula-3'>BMP x 1.55 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
                     <div>
-                        <h2>Heavy Exercise (6 - 7 days / week)</h2>
+                        <h2 name="translate" caption="1.725">Heavy Exercise (6 - 7 days / week)</h2>
                         <p id='tdee-formula-4'>BMP x 1.725 = </p>
                     </div>
                 </div>
                 <div class="tdee-each-item">
                     <div>
-                        <h2>Athlete (2 times / days)</h2>
+                        <h2 name="translate" caption="1.9">Athlete (2 times / days)</h2>
                         <p id='tdee-formula-5'>BMP x 1.9 = </p>
                     </div>
                 </div>
@@ -134,7 +154,7 @@
     </main>
 
 
-    <script src='main.js'></script>
+    <script src='./javascript/main.js'></script>
 </body>
 
 </html>

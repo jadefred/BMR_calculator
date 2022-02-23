@@ -16,11 +16,23 @@ body {
 }
 
 /*heading*/
+.lang-button {
+  display: flex;
+  justify-content: center;
+}
+
+.lang-button button {
+  background-color: #27272b;
+  font-size: 14px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
 h1 {
   text-align: center;
   font-weight: 700;
   font-size: 3rem;
-  margin: 2rem 0 0 0;
+  margin: 2.5rem 0 0 0;
   color: white;
 }
 
@@ -30,9 +42,13 @@ h1 {
   font-family: "Noto Serif Display", serif;
   font-size: 15px;
   font-weight: 200;
-  width: 70%;
-  margin: 2rem auto 2rem auto;
-  line-height: 1.5rem;
+}
+
+.des-bmr {
+  margin: 1rem auto 0 auto;
+}
+.des-tdee {
+  margin: 0 auto 1rem auto;
 }
 
 /*main - include form-box and result-box*/
@@ -51,8 +67,14 @@ main {
   row-gap: 1rem;
   margin-top: 2rem;
 }
+.bmp-result-line .result {
+  height: 50px;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-.bmp-result-line {
+.bmp-result-line p {
   margin: 0;
 }
 
@@ -128,15 +150,13 @@ button {
 
 .form-formula-info {
   font-size: 14px;
+  margin-bottom: 1rem;
 }
 
 .formula-explanation {
   font-size: 13px;
   color: rgba(39, 39, 43, 0.5);
-}
-
-.formula-explanation span {
-  font-family: 600;
+  margin: 0;
 }
 
 /*all result*/
@@ -153,7 +173,7 @@ button {
 
 .result-title::after {
   content: "";
-  width: 150px;
+  width: 100px;
   height: 4px;
   background-color: rgba(39, 39, 43, 0.5);
   position: absolute;
@@ -211,11 +231,11 @@ button {
   }
   .form-box {
     width: 80%;
-    min-width: 300px;
+    min-width: 400px;
   }
   .result-box {
     width: 80%;
-    min-width: 300px;
+    min-width: 400px;
     margin-top: 2rem;
   }
 }
